@@ -2,53 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clean academic fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Scandinavian Academic Design System */
 
 @layer base {
   :root {
-    /* Clean white background */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
-    
-    /* Card/sections */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
-    
-    /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
-    
-    /* Academic burgundy/maroon primary */
-    --primary: 0 100% 25%;
-    --primary-foreground: 0 0% 100%;
-    
-    /* Secondary - light gray */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
-    
-    /* Muted */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    
-    /* Accent - same burgundy */
-    --accent: 0 100% 25%;
-    --accent-foreground: 0 0% 100%;
-    
-    /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Borders */
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 100% 25%;
-    
-    --radius: 0.25rem;
+    /* Core palette - warm slate + terracotta accent */
+    --background: 40 20% 98%;
+    --foreground: 220 25% 15%;
 
-    /* Typography */
-    --heading-font: 'Source Sans 3', sans-serif;
-    --body-font: 'Source Sans 3', sans-serif;
+    --card: 40 15% 96%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 40 20% 98%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Deep scholarly slate */
+    --primary: 220 30% 20%;
+    --primary-foreground: 40 20% 98%;
+
+    /* Warm sand */
+    --secondary: 35 25% 92%;
+    --secondary-foreground: 220 25% 15%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Terracotta accent */
+    --accent: 15 65% 55%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 15 65% 55%;
+
+    --radius: 0.375rem;
+
+    /* Custom tokens */
+    --heading-font: 'Crimson Pro', Georgia, serif;
+    --body-font: 'Inter', system-ui, sans-serif;
+    
+    /* Gradient for hero */
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 20%) 0%, hsl(220 25% 30%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 65% 55%) 0%, hsl(25 70% 60%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220 25% 15% / 0.08);
+    --shadow-card: 0 2px 12px -2px hsl(220 25% 15% / 0.06);
+    --shadow-elevated: 0 12px 40px -8px hsl(220 25% 15% / 0.12);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,33 +66,33 @@
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 95%;
-    
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
-    
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
-    
-    --primary: 0 80% 45%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 95%;
-    
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-    
-    --accent: 0 80% 45%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 0 80% 45%;
+    --background: 220 25% 10%;
+    --foreground: 40 15% 95%;
+
+    --card: 220 25% 13%;
+    --card-foreground: 40 15% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 40 15% 95%;
+
+    --primary: 40 15% 95%;
+    --primary-foreground: 220 25% 10%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 40 15% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 15 65% 55%;
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 15 65% 55%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -112,30 +117,72 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--body-font);
-    font-size: 16px;
-    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    font-weight: 700;
-  }
-
-  a {
-    @apply text-primary hover:underline;
+    @apply text-foreground tracking-tight;
   }
 }
 
-/* Simple utility classes */
-.font-heading {
-  font-family: var(--heading-font);
-}
+@layer utilities {
+  .font-heading {
+    font-family: var(--heading-font);
+  }
 
-.font-body {
-  font-family: var(--body-font);
-}
+  .font-body {
+    font-family: var(--body-font);
+  }
 
-/* Section headings - academic style */
-.section-heading {
-  @apply text-primary font-bold text-lg border-b-2 border-primary pb-1 mb-4;
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[1.5px] bg-accent origin-bottom-right scale-x-0 transition-transform duration-300 ease-out;
+  }
+
+  .link-underline:hover::after {
+    @apply origin-bottom-left scale-x-100;
+  }
+
+  /* Section reveal animation */
+  .reveal {
+    @apply opacity-0 translate-y-6;
+    animation: reveal 0.7s ease-out forwards;
+  }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.3s; }
+  .reveal-delay-4 { animation-delay: 0.4s; }
 }
