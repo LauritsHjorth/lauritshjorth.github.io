@@ -9,49 +9,50 @@ interface CVEntry {
 
 const education: CVEntry[] = [
   {
-    year: "2022 – Present",
-    title: "PhD in Economics",
-    institution: "Copenhagen Business School",
-    description: "Focus on Labor and Spatial Economics",
-  },
-  {
-    year: "2020 – 2022",
-    title: "MSc in Economics",
+    year: "2015 – 2019",
+    title: "Master of Science in Economics",
     institution: "University of Copenhagen",
-    description: "Specialization in Applied Microeconometrics",
   },
   {
-    year: "2017 – 2020",
-    title: "BSc in Economics",
+    year: "2013 – 2015",
+    title: "Bachelor of Arts in Philosophy",
+    institution: "University of Copenhagen",
+  },
+  {
+    year: "2010 – 2015",
+    title: "Bachelor of Science in Economics",
     institution: "University of Copenhagen",
   },
 ];
 
-const experience: CVEntry[] = [
+const positions: CVEntry[] = [
   {
-    year: "2022 – Present",
+    year: "2023 – Present",
     title: "PhD Fellow",
-    institution: "Department of Economics, CBS",
-    description: "Teaching and research in labor economics",
+    institution: "Department of Economics, Copenhagen Business School",
   },
   {
-    year: "2021 – 2022",
+    year: "2016 – 2018",
     title: "Research Assistant",
-    institution: "CEBI, University of Copenhagen",
-    description: "Empirical research on labor market dynamics",
+    institution: "Department of Economics, University of Copenhagen",
   },
 ];
 
-const awards: CVEntry[] = [
+const teaching: CVEntry[] = [
   {
-    year: "2022",
-    title: "PhD Scholarship",
+    year: "2024",
+    title: "Teaching Assistant, Macroeconomics",
     institution: "Copenhagen Business School",
   },
   {
-    year: "2021",
-    title: "Best Master's Thesis Award",
-    institution: "Department of Economics",
+    year: "2018",
+    title: "Teaching Assistant, Advanced Microeconometrics",
+    institution: "University of Copenhagen",
+  },
+  {
+    year: "2017 – 2023",
+    title: "Teaching Assistant, Econometrics II",
+    institution: "University of Copenhagen",
   },
 ];
 
@@ -102,13 +103,12 @@ export function CVSection() {
             <p className="font-body text-sm font-medium text-accent tracking-wide uppercase">
               Curriculum Vitae
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
-              Education & Experience
-            </h2>
+
           </div>
 
           <a
-            href="#"
+            href="/hjorth_cv.pdf"
+            download
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-medium rounded-md hover:bg-primary/90 transition-all hover:shadow-elevated self-start md:self-auto"
           >
             <Download size={16} />
@@ -128,17 +128,17 @@ export function CVSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-foreground">
               <Calendar size={18} className="text-accent" />
-              <h3 className="font-heading text-lg font-semibold">Experience</h3>
+              <h3 className="font-heading text-lg font-semibold">Positions</h3>
             </div>
-            <CVTimeline entries={experience} icon={Calendar} />
+            <CVTimeline entries={positions} icon={Calendar} />
           </div>
 
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-foreground">
               <Award size={18} className="text-accent" />
-              <h3 className="font-heading text-lg font-semibold">Awards</h3>
+              <h3 className="font-heading text-lg font-semibold">Teaching</h3>
             </div>
-            <CVTimeline entries={awards} icon={Award} />
+            <CVTimeline entries={teaching} icon={Award} />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { MapPin, GraduationCap, Briefcase } from "lucide-react";
 const highlights = [
   {
     icon: GraduationCap,
-    title: "PhD Candidate",
+    title: "PhD Student",
     description: "Economics, Copenhagen Business School",
   },
   {
@@ -28,9 +28,7 @@ export function AboutSection() {
               <p className="font-body text-sm font-medium text-accent tracking-wide uppercase">
                 About Me
               </p>
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
-                Economist & Researcher
-              </h2>
+
             </div>
 
             <div className="space-y-4">
@@ -57,21 +55,18 @@ export function AboutSection() {
 
           <div className="space-y-5">
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              I am a third-year PhD student in Economics at Copenhagen Business School (CBS). 
-              My research lies at the intersection of labor and spatial economics, studying how 
-              job mobility and local labor market structure shape workers' careers and wage dynamics.
-            </p>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              My work combines rich administrative data with modern econometric methods to 
-              understand the geographic and occupational dimensions of labor markets. I am 
-              particularly interested in how workers navigate career transitions and how 
-              local economic conditions affect individual outcomes.
-            </p>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Prior to my PhD, I completed my graduate studies in Economics with a focus on 
-              applied microeconometrics. I have experience working with large-scale register 
-              data and enjoy combining theoretical insights with empirical analysis.
-            </p>
+    I am a PhD student in Economics at Copenhagen Business School (CBS),
+    working in labor and spatial economics.
+  </p>
+  <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+    I am particularly interested in understanding how the
+    structure of local labor markets shapes long-run
+    outcomes for workers and contributes to persistent disparities across
+    localities.
+  </p>
+  <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
+    I work with structural models and large datasets, such as the Danish administrative data. 
+  </p>
           </div>
         </div>
       </div>

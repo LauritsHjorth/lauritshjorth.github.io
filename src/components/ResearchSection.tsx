@@ -9,37 +9,28 @@ interface Paper {
   year: string;
   abstract: string;
   tags: string[];
+  pdf?: string;
   link?: string;
 }
 
 const papers: Paper[] = [
   {
     id: "1",
-    title: "Job Mobility and Local Labor Market Structure: Evidence from Denmark",
+    title: "The Geography of Careers",
     status: "working",
-    year: "2024",
     abstract:
-      "This paper examines how local labor market structure affects job-to-job transitions and wage growth. Using comprehensive Danish administrative data, I document substantial heterogeneity in mobility patterns across regions and show that labor market thickness—measured by the density of relevant job opportunities—significantly influences worker career trajectories. The findings suggest that spatial mismatch in labor markets has important implications for wage inequality across regions.",
-    tags: ["Labor Economics", "Spatial Economics", "Job Mobility"],
+      "This paper studies job search across geography and occupations. Using matched employer-employee data for Denmark (1995-2019), I document that worker flows decline sharply with both geographic and occupational distance. I extend a spatial search framework by introducing an occupational dimension: job offers are characterized by a triple of location, occupation, and wage, and offer arrival rates decline with distance in each dimension. I estimate a structural model of on- and off-the-job search that separates the role of offer arrival rates from workers' acceptance decisions. In the model, frictions limit workers' mobility across labor market segments. I use the framework to evaluate how these frictions shape unemployment rates and wage growth across local labor markets.",
+    tags: ["Labor Economics", "Spatial Economics", "Occupational Mobility"],
+    pdf: "/papers/The Geography of Careers.pdf",
   },
   {
     id: "2",
-    title: "Geographic Wage Premiums and Worker Sorting",
-    coauthors: "with J. Smith",
+    title: "Local Labor Matching",
+    coauthors: "with Daniel Borowczyk-Martins and Annaig Morin",
     status: "working",
-    year: "2024",
     abstract:
-      "We investigate the sources of geographic wage differentials using matched employer-employee data. Our analysis decomposes wage gaps into components attributable to worker sorting, firm effects, and genuine location premiums. We find that while worker sorting explains a substantial portion of observed differentials, significant location-specific premiums remain after accounting for selection.",
-    tags: ["Spatial Economics", "Wage Inequality"],
-  },
-  {
-    id: "3",
-    title: "Occupational Transitions and Skill Transferability",
-    status: "working",
-    year: "2023",
-    abstract:
-      "This paper develops a framework for measuring skill transferability across occupations and examines how workers leverage portable skills when changing careers. Using detailed data on job tasks and worker transitions, I construct measures of skill overlap and estimate how transferability affects the wage costs of occupational switches. The results highlight the importance of general skills in facilitating labor market flexibility.",
-    tags: ["Labor Economics", "Skills", "Career Mobility"],
+      "There are large and persistent differences in unemployment rates across local labor markets. Motivated by that observation, we study differences in matching efficiencies across local labor markets. We consider a matching function where different types of workers search for jobs with different efficiencies. We use panel data on local labor markets from the United States to estimate the matching efficiencies of the unemployed for each local labor market. We find substantial variation in matching efficiencies across markets and examine how this heterogeneity correlates with observable characteristics of local labor markets, including industrial composition, worker demographics, and urban density.",
+    tags: ["Labor Economics", "Unemployment", "Matching"],
   },
 ];
 
@@ -69,13 +60,7 @@ export function ResearchSection() {
           <p className="font-body text-sm font-medium text-accent tracking-wide uppercase">
             Research
           </p>
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground">
-            Working Papers
-          </h2>
-          <p className="font-body text-base text-muted-foreground max-w-2xl">
-            My research focuses on understanding labor market dynamics through the lens of 
-            spatial economics and worker mobility.
-          </p>
+
         </div>
 
         <div className="space-y-4">
@@ -155,10 +140,16 @@ export function ResearchSection() {
                     </div>
 
                     <div className="flex flex-wrap gap-3 pt-2">
-                      <button className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-body text-sm font-medium rounded-md hover:bg-primary/90 transition-colors">
-                        <FileText size={16} />
-                        Download PDF
-                      </button>
+                      {paper.pdf && (
+                        <a
+                          href={paper.pdf}
+                          download
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-body text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
+                        >
+                          <FileText size={16} />
+                          Download PDF
+                        </a>
+                      )}
                       {paper.link && (
                         <a
                           href={paper.link}

@@ -21,7 +21,7 @@ export function HeroSection() {
             </div>
             
             <p className="font-body text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Researching how job mobility and local labor market structure shape workers' careers and wage dynamics.
+              Studying local labor markets.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2 opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -41,13 +41,13 @@ export function HeroSection() {
               </a>
             </div>
 
-            <div className="flex items-center gap-6 pt-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            {/* <div className="flex items-center gap-6 pt-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               <a
                 href="mailto:lrh.eco@cbs.dk"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
               >
                 <Mail size={16} />
-                lrh.eco@cbs.dk
+                Mail
               </a>
               <a
                 href="https://github.com/lauritshjorth"
@@ -58,25 +58,27 @@ export function HeroSection() {
                 <Github size={16} />
                 GitHub
               </a>
-            </div>
+            </div> */}
           </div>
 
-          {/* Profile Image Placeholder */}
-          <div className="hidden md:block opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              <div className="w-64 h-80 rounded-lg bg-gradient-to-br from-secondary to-muted overflow-hidden shadow-elevated">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full bg-muted-foreground/10 flex items-center justify-center">
-                    <span className="font-heading text-4xl text-muted-foreground/40">LH</span>
-                  </div>
-                </div>
-              </div>
+          {/* Profile Image */}
+          <div
+            className="hidden md:block opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <div className="relative w-64 h-80 rounded-lg overflow-hidden shadow-elevated">
+              <img
+                src="/billede_Farve_B_tilweb.png"
+                alt="Laurits Rømer Hjorth"
+                className="w-full h-full object-cover"
+              />
+            </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-lg border-2 border-accent/30 -z-10" />
             </div>
           </div>
         </div>
-      </div>
+      
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '0.7s' }}>
