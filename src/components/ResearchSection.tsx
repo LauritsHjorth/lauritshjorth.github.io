@@ -22,7 +22,7 @@ const papers: Paper[] = [
       "This paper studies job search across geography and occupations. Using matched employer-employee data for Denmark (1995-2019), I document that worker flows decline sharply with both geographic and occupational distance. I extend a spatial search framework by introducing an occupational dimension: job offers are characterized by a triple of location, occupation, and wage, and offer arrival rates decline with distance in each dimension. I estimate a structural model of on- and off-the-job search that separates the role of offer arrival rates from workers' acceptance decisions. In the model, frictions limit workers' mobility across labor market segments. I use the framework to evaluate how these frictions shape unemployment rates and wage growth across local labor markets.",
     tags: ["Labor Economics", "Spatial Economics", "Occupational Mobility"],
     pdf: "/papers/hjorth_jmp.pdf",
-    link: "https://drive.proton.me/urls/YMGA7GQPWW#BCDd3C5Ns9Zd",
+    link: "https://github.com/lauritshjorth/lauritshjorth.github.io/blob/main/public/papers/hjorth_jmp.pdf",
   },
   {
     id: "2",
